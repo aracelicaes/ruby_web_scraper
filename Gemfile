@@ -1,3 +1,4 @@
 source "https://rubygems.org"
 
-require gem "nokogiri"
+gem 'nokogiri'
+gem 'rubocop'
