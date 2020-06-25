@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.1)
+    colorize (0.8.1)
     mini_portile2 (2.4.0)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
@@ -29,6 +30,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  colorize
   nokogiri
   rubocop
 
