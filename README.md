@@ -7,7 +7,7 @@ This Project is a Web Scraper built with Ruby and Nokogiri Gem. This is a Capsto
 - [Ruby Web Scraper](#ruby-web-scraper)
   - [Table of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
-  - [Tic Tac Toe in Ruby](#tic-tac-toe-in-ruby)
+  - [Web Scraper in Ruby](#web-scraper-in-ruby)
     - [Live Environment](#live-environment)
   - [Features:](#features)
     - [Built with Ruby](#built-with-ruby)
@@ -18,7 +18,7 @@ This Project is a Web Scraper built with Ruby and Nokogiri Gem. This is a Capsto
 - [Acknowledgements](#acknowledgements)
 <!-- ABOUT THE PROJECT -->
 # About The Project
-## Tic Tac Toe in Ruby
+## Web Scraper in Ruby
 This specific web scraper is built to extract data from <Shasa.com>, such as:
 - The Item Name
 - The Item Price
