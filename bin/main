@@ -1,0 +1,62 @@
+#! /usr/bin/env ruby
+
+require 'nokogiri'
+require 'open-uri'
+require 'colorize'
+
+# Info to Scrape
+# 1. The Clothing Type (T-Shirt) & Name
+# 2. The Price
+# 3. The Clothing (T-Shirt) URL
+
+# Fetch and parse HTML document method
+def html_get
+  html = 'https://www.shasa.com/mujer/ropa/tops/shasa-playeras.html'
+  doc = Nokogiri::HTML(URI.open(html))
+  puts doc
+end
+
+# Get the Clothing Name
+def clothing_type
+  puts 'Playera de Mickey Mouse'
+  # get clothing type
+  # get clothing (t-shirts) name ie. Playera Mickey Mouse
+end
+
+def price
+  price = 399.00
+  puts "Price $#{price}."
+  # gets clothing price
+end
+
+def clothing_url
+  piece_url = 'www.shasa.com/playera1'
+  puts piece_url
+  # gets clothing URL
+end
+
+def item_iterator
+  puts 'I am iterating'
+  # will iterate thru each item to get data
+  # When we have a New Clothing Item (t-shirt) title, it'll create an empty array
+  # It'll print all the clothing item's elements inside that new array
+  # it'll push every new array into the final array
+end
+
+def print_all
+  puts clothing_type
+  puts price
+  puts clothing_url
+  puts item_iterator
+  # prints all the methods outputs
+  # output format is a multidimentional array
+  # clothing type
+  # Price
+  # Discount Price
+  # Clothing URL
+  # The previous format for each item
+  # Array format so that items are individually accessible
+  # tshirt1 { name, price, disc price url} hash
+end
+
+puts print_all
