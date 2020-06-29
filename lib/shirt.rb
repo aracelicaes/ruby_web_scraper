@@ -5,13 +5,18 @@ require 'colorize'
 class Shirt
   attr_reader :item_name, :item_price, :item_url
 
-  def the_parser(info)
-    @item_name = info.children[3].children[1].children[0].text
-    @item_price = info.children[3].children[3].children[1].children[1].text
-    @item_url = info.children[3].children[1].children[0].attributes['href']
+  def initialize(raw_info)
+    @item_name = raw_info.children[3].children[1].children[0].text
+    @item_price = raw_info.children[3].children[3].children[1].children[1]
+    @item_url = raw_info.children[3].children[1].children[0].attributes['href']
+    name_caps
   end
 
-  def initialize(raw_info)
-    the_parser(raw_info)
+  private
+  
+  def name_caps
+    title = @item_name.split(" ")
+    title.each { |t| t.capitalize! }
+    @item_name = title.join(" ")
   end
 end
