@@ -16,5 +16,4 @@ doc.css('li.item .product-content').each do |shirt_data|
   shirt_collection.push(new_shirt)
 end
 
-
 Printer.print_all(shirt_collection)

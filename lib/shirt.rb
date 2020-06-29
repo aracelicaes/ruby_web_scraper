@@ -13,10 +13,10 @@ class Shirt
   end
 
   private
-  
+
   def name_caps
-    title = @item_name.split(" ")
-    title.each { |t| t.capitalize! }
-    @item_name = title.join(" ")
+    title = @item_name.split(' ')
+    title.each(&:capitalize!)
+    @item_name = title.join(' ')
   end
 end

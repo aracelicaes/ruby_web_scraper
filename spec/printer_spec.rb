@@ -5,12 +5,12 @@ describe Printer do
   it 'prints data to console' do
     html = 'https://www.shasa.com/mujer/ropa/tops/shasa-playeras.html?p=1'
     doc = Nokogiri::HTML(URI.open(html))
-    
+
     shirt_collection = []
 
     doc.css('li.item .product-content').each do |shirt_data|
-    new_shirt = Shirt.new(shirt_data)
-    shirt_collection.push(new_shirt)
+      new_shirt = Shirt.new(shirt_data)
+      shirt_collection.push(new_shirt)
     end
 
     expect { Printer.print_all(shirt_collection) }.to output.to_stdout
@@ -21,8 +21,8 @@ describe Shirt do
   html = 'https://www.shasa.com/mujer/ropa/tops/shasa-playeras.html?p=1'
   doc = Nokogiri::HTML(URI.open(html))
 
-  let (:raw_info) { doc.css('li.item .product-content')[0] }
-  let (:new_shirt) { Shirt.new(raw_info) }
+  let(:raw_info) { doc.css('li.item .product-content')[0] }
+  let(:new_shirt) { Shirt.new(raw_info) }
   it 'Checks that Item_Name is a String' do
     expect(new_shirt.item_name).to be_a(String)
   end
