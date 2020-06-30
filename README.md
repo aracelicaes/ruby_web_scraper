@@ -56,4 +56,3 @@ Check out the Live Version we have created for you by clicking on the next link:
 - [Jesus Castello Ruby Guides](https://www.rubyguides.com/2012/01/parsing-html-in-ruby/)
 - [The Bastards Book of Ruby](http://ruby.bastardsbook.com/chapters/html-parsing/)
 
-
