@@ -1,9 +1,10 @@
-#! /usr/bin/env ruby
+#!/usr/bin/env ruby
 
 require 'nokogiri'
 require 'open-uri'
 require 'colorize'
 require_relative '../lib/shirt'
+require_relative '../lib/printer'
 
 html = 'https://www.shasa.com/mujer/ropa/tops/shasa-playeras.html?p=1'
 doc = Nokogiri::HTML(URI.open(html))
@@ -15,17 +16,4 @@ doc.css('li.item .product-content').each do |shirt_data|
   shirt_collection.push(new_shirt)
 end
 
-def print_all(shirt_collection)
-  shirt_collection.each do |shirt|
-    n = 'Item Name: '.colorize(:yellow)
-    pr = 'Price: '.colorize(:red)
-    u = 'Item URL: '.colorize(:magenta)
-    line = '++++++++++++++++++++++++++++++++++++++++++' + "\n\n"
-    puts n + shirt.item_name
-    puts pr + shirt.item_price
-    puts u + shirt.item_url + "\n\n"
-    puts line
-  end
-end
-
-print_all(shirt_collection)
+Printer.print_all(shirt_collection)
